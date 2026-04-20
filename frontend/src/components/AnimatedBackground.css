@@ -21,7 +21,6 @@
     position: relative;
     transform-style: preserve-3d;
     animation: rotate3DHelix 4s linear infinite; /* perfectly smooth, constant speed */
-    will-change: transform;
 }
 
 .dna-node {
@@ -31,7 +30,6 @@
     position: absolute;
     /* Counter-rotate to keep the spheres facing the camera, giving true sphere illusion */
     animation: keepSphereFacing 4s linear infinite;
-    will-change: transform;
 }
 
 .node-left {

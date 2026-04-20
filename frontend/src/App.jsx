@@ -10,10 +10,16 @@ import Appointment from './pages/Appointment'
 import MyAppointments from './pages/MyAppointments'
 import MyProfile from './pages/MyProfile'
 import Footer from './components/Footer'
+import SymptomChecker from './pages/SymptomChecker'
+import AffordableTreatment from './pages/AffordableTreatment'
+import MedicineReminders from './pages/MedicineReminders'
+import ReminderEngine from './components/ReminderEngine'
+import AIChatWidget from './components/AIChatWidget'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 import AnimatedBackground from './components/AnimatedBackground'
+import EmergencyWidget from './components/EmergencyWidget'
 import Lenis from 'lenis'
 import { useEffect } from 'react'
 
@@ -53,7 +59,13 @@ const App = () => {
         <Route path='/my-appointments' element={<MyAppointments />} />
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/verify' element={<Verify />} />
+        <Route path='/symptom-checker' element={<SymptomChecker />} />
+        <Route path='/affordable-treatment' element={<AffordableTreatment />} />
+        <Route path='/medicine-reminders' element={<MedicineReminders />} />
       </Routes>
+      <EmergencyWidget />
+      <AIChatWidget />
+      <ReminderEngine />
       <Footer />
     </div>
   )

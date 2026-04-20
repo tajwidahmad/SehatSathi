@@ -27,20 +27,32 @@ const Navbar = () => {
       <img onClick={() => navigate('/')} className='w-44 cursor-pointer hover:scale-105 transition-transform duration-300' src={assets.logo} alt="" />
       <ul className='md:flex items-start gap-5 font-medium hidden'>
         <NavLink to='/' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
-          <li className='py-1 hover:text-primary transition-colors duration-300 text-center'>HOME</li>
+          <li className='py-1 hover:text-primary font-bold transition-colors duration-300 text-center'>HOME</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/doctors' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
-          <li className='py-1 hover:text-primary transition-colors duration-300 text-center'>ALL DOCTORS</li>
+          <li className='py-1 hover:text-primary font-bold transition-colors duration-300 text-center'>ALL DOCTORS</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/about' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
-          <li className='py-1 hover:text-primary transition-colors duration-300 text-center'>ABOUT</li>
+          <li className='py-1 hover:text-primary font-bold transition-colors duration-300 text-center'>ABOUT</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/contact' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
-          <li className='py-1 hover:text-primary transition-colors duration-300 text-center'>CONTACT</li>
+          <li className='py-1 hover:text-primary font-bold transition-colors duration-300 text-center'>CONTACT</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
+        </NavLink>
+        <NavLink to='/symptom-checker' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
+          <li className='py-1 hover:text-primary font-bold text-primary transition-colors duration-300 text-center flex items-center gap-1'>
+             <img src={assets.chats_icon} className="w-4 h-4 hidden lg:block" alt=""/> AI SYMPTOMS
+          </li>
+          <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
+        </NavLink>
+        <NavLink to='/medicine-reminders' className='hover:-translate-y-1 hover:scale-110 transition-all duration-300'>
+          <li className='py-1 hover:text-purple-600 font-bold transition-colors duration-300 text-center flex items-center gap-1'>
+             MEDICINE REMINDERS
+          </li>
+          <hr className='border-none outline-none h-0.5 bg-purple-600 w-3/5 m-auto hidden' />
         </NavLink>
       </ul>
 
@@ -54,7 +66,7 @@ const Navbar = () => {
                 <div className='min-w-48 bg-gray-50 rounded flex flex-col gap-4 p-4 shadow-lg'>
                   <p onClick={() => navigate('/my-profile')} className='hover:text-primary transition-colors cursor-pointer'>My Profile</p>
                   <p onClick={() => navigate('/my-appointments')} className='hover:text-primary transition-colors cursor-pointer'>My Appointments</p>
-                  <p onClick={logout} className='hover:text-primary transition-colors cursor-pointer'>Logout</p>
+                  <p onClick={logout} className='hover:text-primary transition-colors cursor-pointer text-red-500'>Logout</p>
                 </div>
               </div>
             </div>
@@ -69,10 +81,12 @@ const Navbar = () => {
             <img onClick={() => setShowMenu(false)} src={assets.cross_icon} className='w-7' alt="" />
           </div>
           <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
-            <NavLink onClick={() => setShowMenu(false)} to='/'><p className='px-4 py-2 rounded full inline-block'>HOME</p></NavLink>
-            <NavLink onClick={() => setShowMenu(false)} to='/doctors' ><p className='px-4 py-2 rounded full inline-block'>ALL DOCTORS</p></NavLink>
-            <NavLink onClick={() => setShowMenu(false)} to='/about' ><p className='px-4 py-2 rounded full inline-block'>ABOUT</p></NavLink>
-            <NavLink onClick={() => setShowMenu(false)} to='/contact' ><p className='px-4 py-2 rounded full inline-block'>CONTACT</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/'><p className='px-4 py-2 rounded full inline-block font-bold'>HOME</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/doctors' ><p className='px-4 py-2 rounded full inline-block font-bold'>ALL DOCTORS</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/about' ><p className='px-4 py-2 rounded full inline-block font-bold'>ABOUT</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/contact' ><p className='px-4 py-2 rounded full inline-block font-bold'>CONTACT</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/symptom-checker' ><p className='px-4 py-2 rounded full inline-block text-primary font-bold'>AI SYMPTOMS</p></NavLink>
+            <NavLink onClick={() => setShowMenu(false)} to='/medicine-reminders' ><p className='px-4 py-2 rounded full inline-block text-purple-600 font-bold'>MEDICINE REMINDERS</p></NavLink>
           </ul>
         </div>
       </div>
