@@ -49,7 +49,7 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 
 ## 📧 Contact  
 **Tajwid Ahmad**  
-📌 B.Tech Student | Aspiring Developer   
+📌 B.Tech Student | Software Developer   
 
 ---
 
